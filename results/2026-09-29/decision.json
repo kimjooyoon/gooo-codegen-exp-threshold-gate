@@ -1,0 +1,71 @@
+{
+  "schema": "gooo/metaprogramming-intent-decision/v1",
+  "intent_id": "threshold_gate",
+  "laya": {
+    "intent_id": "threshold_gate",
+    "receipt": {
+      "schema": "gooo/typed-decision-receipt/v1",
+      "mode": "laya",
+      "selected": "if_else_ladder",
+      "provider": "laya",
+      "model": "laya-rl-agent",
+      "model_revision": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+      "routing": {
+        "detection": {
+          "diacritic_rate": 0,
+          "is_english": false,
+          "language": null,
+          "language_undecided": true,
+          "mixed_segment": null,
+          "non_latin_fraction": 1,
+          "script": "hangul",
+          "script_profile": {
+            "hangul": 1
+          }
+        },
+        "model": "multilingual",
+        "reason": "non-Latin script (hangul, 100% of letters); the English checkpoint cannot read it",
+        "repo": "convaiinnovations/laya/multilingual",
+        "workflow": null
+      },
+      "probabilities": {
+        "assigned_ladder": 0.0719,
+        "assigned_switch": 0.0361,
+        "boolean_switch": 0.1864,
+        "closure_branch": 0.0897,
+        "finite_domain_map": 0.0589,
+        "guard_returns": 0.1101,
+        "if_else_ladder": 0.259,
+        "partial_assignment": 0.0935,
+        "predicate_helpers": 0.0635,
+        "predicate_table": 0.0309
+      },
+      "confidence": 0.087,
+      "answer_confidence": 0.259,
+      "request_sha256": "sha256:7f91df5f649274c7a3c243b4afaaa1c8a75a614b267aa99434a68f4d705fe245"
+    },
+    "top1_route": "if_else_ladder",
+    "sampled_route": "partial_assignment",
+    "sample_seed": "sha256:c15819a6b5e8a2b10cab29c993f3fb52b03fe202d82e34429c3e9ee67612ebb2",
+    "latency_ms": 118.052
+  },
+  "deterministic_fallback": {
+    "intent_id": "threshold_gate",
+    "receipt": {
+      "schema": "gooo/typed-decision-receipt/v1",
+      "mode": "deterministic_fallback",
+      "selected": "guard_returns",
+      "fallback_reason": "NOT_CONFIGURED",
+      "provider": "deterministic",
+      "request_sha256": "sha256:7f91df5f649274c7a3c243b4afaaa1c8a75a614b267aa99434a68f4d705fe245"
+    },
+    "top1_route": "guard_returns",
+    "sampled_route": "guard_returns",
+    "sample_seed": "sha256:387b7233ddf06ffdf051d3cabe2148a64682aafbf26b06c50f04d6108d075fac",
+    "latency_ms": 5.031
+  },
+  "source_report_sha256": {
+    "laya": "sha256:5fdb3ab209e68edfdd406e7ca3d586f4d16fb9792ec8062daca884f96a5d4672",
+    "deterministic_fallback": "sha256:7d89ecb76f2df569c10852df76f4fbf11bbaa733edca4b71a14a23e2d08c4277"
+  }
+}
